@@ -42,8 +42,9 @@ following command in a terminal:
 
 .. note::
 
-    Make sure that the "minimum-stability" setting is set to "beta" in
-    composer.json, otherwise the installation will fail:
+    Since puli is in beta phase, it requires that you allow it to install other
+    dependencies that are also in beta. The easiest way is to set "minimum-stability"
+    setting to "beta" in composer.json
 
     .. code-block:: json
 
@@ -51,6 +52,11 @@ following command in a terminal:
             ...,
             "minimum-stability": "beta"
         }
+
+    However, this may have consequences on other dependencies. If this happens, an
+    alternative is to explicitly require all of the puli packages as beta versions
+    in composer.json.
+
 
 This will download the bundle to your project.
 
